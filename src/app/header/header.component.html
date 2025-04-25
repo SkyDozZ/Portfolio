@@ -1,0 +1,34 @@
+<header class="fixed top-0 w-full z-50 bg-white shadow">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center ">
+      <a routerLink="/" class="text-xl font-bold text-indigo-600">
+        <div class="flex items-center space-x-2">
+          <img src="assets/github.png" alt class="h-8 w-8">
+          <h1 class="text-[#555B6E]">Delsinne Benjamin</h1>
+        </div>
+      </a>
+  
+      <!-- Burger button (mobile only) -->
+      <button class="md:hidden text-slate-700 focus:outline-none  px-4" (click)="isMenuOpen = !isMenuOpen">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+  
+      <!-- Desktop nav -->
+      <nav class="hidden md:flex px-4 space-x-5">
+        <a routerLink="/cv" class="text-slate-700 hover:text-indigo-600"><h2>C.V</h2></a>
+        <a routerLink="/projects" class="text-slate-700 hover:text-indigo-600"><h2>Projets</h2></a>
+        <a routerLink="/about" class="text-slate-700 hover:text-indigo-600"><h2>À propos</h2></a>
+        <a routerLink="/contact" class="text-slate-700 hover:text-indigo-600"><h2>Contact</h2></a>
+      </nav>
+    </div>
+  
+    <!-- Mobile nav -->
+    <div [ngClass]="{'mobile-nav': true, 'open': isMenuOpen}" class="md:hidden bg-white shadow px-4 pb-2">
+      <a routerLink="/" class="block py-2 text-slate-700 hover:text-indigo-600"><h2>Accueil</h2></a>
+      <a routerLink="/projects" class="block py-2 text-slate-700 hover:text-indigo-600"><h2>Projets</h2></a>
+      <a routerLink="/about" class="block py-2 text-slate-700 hover:text-indigo-600"><h2>À propos</h2></a>
+      <a routerLink="/contact" class="block py-2 text-slate-700 hover:text-indigo-600"><h2>Contact</h2></a>
+    </div>
+  </header>
+  

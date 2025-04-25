@@ -1,0 +1,37 @@
+/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+
+.background-color{
+    background-color: #ECE9E9;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: "Special Gothic Expanded One", sans-serif;
+}
+
+@keyframes slide-in-right-to-left {
+    0% {
+      opacity: 0;
+      transform: translateX(100px); /* Commence à droite */
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0); /* Finit centré */
+    }
+  }
+  
+  .animate-slide-in {
+    animation: slide-in-right-to-left 1.5s ease-out forwards;
+  }
+
+/* Pour que la boîte se ferme proprement et l'animation se fasse sur la hauteur */
+.mobile-nav {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s ease-in-out;
+  }
+  
+/* Quand le menu est ouvert, on lui donne une hauteur suffisante pour afficher les éléments */
+.mobile-nav.open {
+    height: 200px; /* Ou la hauteur nécessaire pour ton contenu */
+}

@@ -1,0 +1,65 @@
+<app-header></app-header>
+
+<section class="min-h-screen flex flex-col justify-center items-center px-4 pt-10 pb-16 text-center" style="background-color: #ECE9E9;">
+  <h1 class="text-3xl font-bold text-[#555B6E] mb-4">Contact</h1>
+  <div class="w-24 h-1 bg-[#89B0AE] rounded-full mx-auto mb-12"></div>
+
+  <p class="text-lg text-[#555B6E] mb-6 max-w-lg">
+    Envie de discuter d’un projet ou d'une collaboration ?<br>Contacte-moi !
+  </p>
+
+    <form 
+      #contactForm="ngForm" 
+      (ngSubmit)="sendEmail($event)" 
+      class="w-full max-w-md space-y-4 bg-white border border-[#89B0AE] rounded-2xl p-6 shadow-sm mx-auto">
+
+      <input 
+        type="text" 
+        name="user_name" 
+        placeholder="Nom" 
+        class="w-full border border-[#89B0AE] p-3 rounded-lg text-[#555B6E] focus:outline-none focus:ring-2 focus:ring-[#BEE3DB]" 
+        required />
+
+      <input 
+        type="email" 
+        name="user_email" 
+        placeholder="Email" 
+        class="w-full border border-[#89B0AE] p-3 rounded-lg text-[#555B6E] focus:outline-none focus:ring-2 focus:ring-[#BEE3DB]" 
+        required />
+
+      <textarea 
+        name="message" 
+        placeholder="Message" 
+        rows="4" 
+        class="w-full border border-[#89B0AE] p-3 rounded-lg text-[#555B6E] focus:outline-none focus:ring-2 focus:ring-[#BEE3DB]" 
+        required></textarea>
+
+      <button type="submit" class="bg-[#89B0AE] text-white px-6 py-3 rounded-2xl hover:bg-[#FFD6BA] hover:text-[#555B6E] transition font-semibold">
+        Envoyer
+      </button>
+    </form>
+
+  <p class="mt-6 text-[#555B6E]">
+    Ou écris-moi directement sur
+    <a href="mailto:delsinnebenjaminpro@gmail.com" class="text-[#89B0AE] hover:text-[#FFD6BA] hover:underline transition">
+      delsinnebenjaminpro&#64;gmail.com
+    </a>
+  </p>
+
+  <!-- Icônes de contact -->
+  <div class="flex items-center justify-center space-x-6 mt-6 text-[#555B6E] text-2xl">
+    <a href="mailto:delsinnebenjaminpro@gmail.com" class="hover:text-[#FFD6BA]" aria-label="Mail">
+      <i class="fas fa-envelope"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/tonprofil" target="_blank" class="hover:text-[#FFD6BA]" aria-label="LinkedIn">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="https://github.com/tonpseudo" target="_blank" class="hover:text-[#FFD6BA]" aria-label="GitHub">
+      <i class="fab fa-github"></i>
+    </a>
+  </div>
+
+</section>
+
+
+<app-footer></app-footer>

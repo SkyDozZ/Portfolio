@@ -1,0 +1,27 @@
+<app-header></app-header>
+<section class="min-h-screen pt-28 px-4" style="background-color: #ECE9E9;">
+  <h2 class="text-3xl font-bold text-center text-[#555B6E] mb-4">Mes Projets</h2>
+
+  <div class="w-24 h-1 bg-[#89B0AE] rounded-full mx-auto mb-12"></div>
+
+  <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
+    <div
+      *ngFor="let project of projects"
+      class="flex flex-col justify-between bg-white border border-[#89B0AE] rounded-2xl p-6 shadow-sm hover:shadow-md transition duration-300 h-full"
+    >
+      <div>
+        <h3 class="text-xl font-semibold text-[#555B6E] mb-2">{{ project.title }}</h3>
+        <p class="text-[#555B6E] mb-4">{{ project.description }}</p>
+      </div>
+      <a
+        *ngIf="project.link"
+        [href]="project.link"
+        target="_blank"
+        class="inline-block text-[#89B0AE] hover:text-[#FFD6BA] font-medium transition"
+      >
+        Voir le projet
+      </a>
+    </div>
+  </div>
+</section>
+<app-footer></app-footer>
